@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dos números no laço FOR</title>
+</head>
+<body>
+
+    <div>
+        <input type="number" id="numeroUsuario" placeholder="Digite um número positivo.">
+
+        <button onclick="verificarNumero()">Verificar</button>
+       
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function verificarNumero() {
+            let num1 = document.getElementById('numeroUsuario').value;
+            num1 = Number(num1);
+            let soma = 0;
+            let resultadoHTML = "<h3>Soma de todos os números de 1 até " + num1 + ":</h3>";
+
+            if (num1 > 0) {
+                for (let i = 1; i <= num1; i++) {
+                    soma += i;
+                    resultadoHTML += i + "<br>";
+                }
+
+                resultadoHTML += "Soma total: " + soma;
+            } else {
+                resultadoHTML = "Número inválido. Por favor, digite um número positivo.";
+            }
+            document.getElementById('resultado').innerHTML = resultadoHTML;
+        }
+    </script>
+</body>
+</html>

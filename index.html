@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo, Negativo ou Zero</title>
+</head>
+<body>
+
+    <div>
+        <input type="number" id="numeroUsuario" placeholder="Informe um número">
+
+        <button onclick="verificarNumero()">Verificar</button>
+       
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function verificarNumero() {
+            let numero = document.getElementById('numeroUsuario').value;
+            numero = Number(numero);
+
+            if (numero > 0) {
+                document.getElementById('resultado').innerText = "Você digitou um número positivo."
+            }
+            else if (numero < 0) {
+                document.getElementById('resultado').innerText = "Você digitou um número negativo"
+            }
+            else {
+                document.getElementById('resultado').innerText = "Você digitou zero." 
+            }
+        }
+    </script>
+</body>
+</html>

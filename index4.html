@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+</head>
+<body>
+
+    <div>
+        <input type="number" id="opcaoUsuario" placeholder="Digitar número de 1 a 7">
+
+        <button onclick="verificarOpcao()">Verificar</button>
+       
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function verificarOpcao() {
+            let diaSemana = document.getElementById('opcaoUsuario').value;
+            diaSemana = Number(diaSemana);
+
+            switch (diaSemana) {
+            case 1:
+                document.getElementById('resultado').innerText = "O número 1 corresponde a Domingo.";
+                break;
+
+
+            case 2:
+                document.getElementById('resultado').innerText = "O número 2 corresponde a Segunda-feira.";
+                break;
+
+
+            case 3:
+                document.getElementById('resultado').innerText = "O número 3 corresponde a Terça-feira.";
+                break;
+
+
+            case 4:
+                document.getElementById('resultado').innerText = "O número 4 corresponde a Quarta-feira.";
+                break;
+
+
+            case 5:
+                document.getElementById('resultado').innerText = "O número 5 corresponde a Quinta-feira.";
+                break;
+
+            case 6:
+                document.getElementById('resultado').innerText = "O número 6 corresponde a Sexta-feira.";
+                break;
+                
+                
+            case 7:
+                document.getElementById('resultado').innerText = "O número 7 corresponde a Sábado.";
+                break;
+
+
+            default:
+                document.getElementById('resultado').innerText = "Opção inválida. Escolha 1, 2, 3, 4, 5, 6 ou 7.";
+        }
+    }
+    </script>
+</body>
+</html>
